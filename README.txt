@@ -2,4 +2,4 @@ Gruppenprojekt Webprogrammierung
 
 Autovermietung
 
-Noah Keller(der Loser), Jens Schneider, Jule Behrens, Jonah Schierding :)
+Noah Keller(der Coolste), Jens Schneider(ist Low), Jule Behrens, Jonah Schierding :)
