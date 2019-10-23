@@ -6,8 +6,19 @@
     <title>Standort</title>
   </head>
   <body>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Standortauswahl">
 
+<div class="dropdownStandorte">
+ <button onclick="myFunction()" class="dropbtn">Standorte</button>
+ <div id="myDropdown" class="dropdown-content">
+   <a href="#">Karlsruhe</a>
+   <a href="#">München</a>
+   <a href="#">Saarbrücken</a>
+   <a href="#">Landau</a>
+
+ </div>
+</div>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Standortauswahl">
+<div class="tableStandorte"
    <table id="standorte">
      <tr class="header">
        <th style="width:60%;">Stadt</th>
@@ -30,5 +41,6 @@
        <td>Pfalz</td>
      </tr>
    </table>
+</div>
   </body>
 </html>
