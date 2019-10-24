@@ -1,35 +1,59 @@
-/**
- * Stylesheet zur Klasse PageOverview: Startseite der App
- */
+/** CSS-Stylesheet für die Startseite */
 
-.tile {
-    display: inline-block;
-
-    border: 1px solid lightgrey;
-    background: rgba(250, 250, 250);
-    padding: 0.5em;
-    margin: 0.5em;
-
-    transition: transform 0.5s, background 0.5s;
-    transform: scale(1);
+body{
+  margin: 0;
 }
 
-.tile img {
-    width: 20em;
-    height: 20em;
-    max-width: 100%;
-    object-fit: cover;
-    display: block;
+nav, div{
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  height: 60px;
+  background-color: #373837;
 }
 
-.tile a,
-.tile a:visited {
-    color: black;
-    text-decoration: none;
+ul{
+  margin: 0;
+  padding: 0;
 }
 
-.tile:hover {
-    background: white;
-    transform: scale(1.01) rotate(0.5deg);
-    cursor: pointer;
+nav a{
+  font-size: 20pt;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+
+div li, div a{
+  list-style-type: none;
+  float: left;
+  margin: 2px 500px 5px 10px;
+}
+
+nav li, div li{
+  list-style-type: none;
+  float: left;
+  margin: 15px 40px 15px 10px;
+}
+
+#angebote{
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  background-color: #77777777;
+}
+
+#formular{
+  margin: 0;
+  padding: 0;
+  height: 340px;
+  background-color: #22222222;
+}
+
+#impressum{
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  background-color: #373837;
 }
