@@ -1,10 +1,10 @@
 "use strict";
 
 /**
- * Klasse PageDetail: Stellt die Detailseite der App zur Verfügung
+ * Klasse PageNotFound: Stellt eine Defaultseite zur Verfügung, die immer
+ * dann angezeigt wird, wenn der Anwender eine unbekannte URL aufruft.
  */
-
-class PageModelle {
+class PageNotFound {
     /**
      * Konstruktor
      * @param {App} app Zentrale Instanz der App-Klasse
@@ -16,9 +16,10 @@ class PageModelle {
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
      */
-    async show(matches) {
-        let html = await fetch("page-modelle/page-modelle.html");
-        let css = await fetch("page-modelle/page-modelle.css");
+    async show() {
+        // Anzuzeigenden Seiteninhalt nachladen
+        let html = await fetch("page-not-found/page-not-found.html");
+        let css = await fetch("page-not-found/page-not-found.css");
 
         if (html.ok && css.ok) {
             html = await html.text();
@@ -34,7 +35,7 @@ class PageModelle {
 
 
         this._app.setPageCss(css);
-
+    
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 }

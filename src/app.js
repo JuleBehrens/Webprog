@@ -42,9 +42,6 @@ class App {
      * index.html heraus aufgerufen werden.
      */
     run() {
-        // Globale Event Listener registrieren
-        document.querySelector("header nav .go-back a").addEventListener("click", () => window.history.back());
-
         // Single Page Router starten und die erste Seite aufrufen
         window.addEventListener("hashchange", () => this._handleRouting());
         this._handleRouting();
@@ -74,7 +71,6 @@ class App {
      */
     _handleRouting() {
         let pageUrl = location.hash.slice(1);
-
         if (pageUrl.length === 0) {
             pageUrl = "/";
         }

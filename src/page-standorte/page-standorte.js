@@ -1,6 +1,26 @@
+"use strict";
 
+/**
+ * Klasse PageOverview: Stellt die Startseite der App zur Verfügung
+ */
+class PageStandorte {
+    /**
+     * Konstruktor
+     * @param {App} app Zentrale Instanz der App-Klasse
+     */
+    constructor(app) {
+        this._app = app;
+    }
 
-function standortlisteFunction() {
+    /**
+     * Seite anzeigen. Wird von der App-Klasse aufgerufen.
+     */
+    async show() {
+        // TODO: Seite anzeigen
+    }
+
+/**
+ standortlisteFunction() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
@@ -23,7 +43,7 @@ function standortlisteFunction() {
 }
 
 
-function standortdropdownFunction() {
+ standortdropdownFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
@@ -39,4 +59,4 @@ window.onclick = function(event) {
       }
     }
   }
-}
+}*/}

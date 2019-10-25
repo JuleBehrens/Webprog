@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Aufgabe: Meine App</title>
+        <title>Schnaider Carformance</title>
         <link rel="shortcut icon" href="favicon.png" />
 
         <!-- Klasse App: Steuert die gesamte Anwendung -->
@@ -10,6 +10,12 @@
 
         <!-- Klasse Database: Verwaltet die Daten der Anwendung -->
         <script src="database.js"></script>
+
+        <script src="page-overview/page-overview.js"></script>
+        <script src="page-carsharing/page-carsharing.js"></script>
+        <script src="page-modelle/page-modelle.js"></script>
+        <script src="page-standorte/page-standorte.js"></script>
+        <script src="page-not-found/page-not-found.js"></script>
 
         <script src="app.js"></script>
 
@@ -39,7 +45,7 @@
                     klass: PageStandorte,
                 },{
                     url: "^/Carsharing/(.*)$",
-                    klass: Carsharing,
+                    klass: PageCarsharing,
                 },{
                     url: ".*",
                     klass: PageNotFound,
@@ -49,7 +55,7 @@
                 app.run();
             });
         </script>
-
+<style id="page-css"></style>
     </head>
     <body>
         <!-- Kopfbereich der App -->
@@ -65,17 +71,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#Modelle">
-                            <span class="page-name"> Modelle</span>
+                        <a href="#/Modelle/">
+                            <span class="page-name">Modelle</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#Standorte">
+                        <a href="#/Standorte/">
                             <span class="page-name">Standorte</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#Carsharing">
+                        <a href="#/Carsharing/">
                             <span class="page-name">Carsharing</span>
                         </a>
                     </li>
