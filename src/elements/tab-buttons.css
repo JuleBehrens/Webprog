@@ -37,7 +37,7 @@
 @media (min-width: 40em) {
     .tab-buttons li {
         display: inline-block;
-        margin-right: 3em;
+        margin-right: 1em;
         padding: 0;
     }
 }

@@ -11,6 +11,8 @@
         <!-- Klasse Database: Verwaltet die Daten der Anwendung -->
         <script src="database.js"></script>
 
+        <script src="app.js"></script>
+
         <!-- TODO: Klasse App ausprogrammieren -->
         <!-- TODO: Klasse PageNotFound anlegen und ausprogrammieren -->
         <!-- TODO: Klasse PageOverview zu Ende programmieren -->
@@ -23,6 +25,31 @@
         <link rel="stylesheet" href="elements/button.css" />
         <link rel="stylesheet" href="elements/tab-buttons.css" />
         <link rel="stylesheet" href="elements/form.css" />
+
+        <script>
+            window.addEventListener("load", () => {
+                let pages = [{
+                    url: "^/$",
+                    klass: PageOverview,
+                },{
+                    url: "^/Modelle/(.*)$",
+                    klass: PageModelle,
+                },{
+                    url: "^/Standorte/(.*)$",
+                    klass: PageStandorte,
+                },{
+                    url: "^/Carsharing/(.*)$",
+                    klass: Carsharing,
+                },{
+                    url: ".*",
+                    klass: PageNotFound,
+                }];
+
+                let app = new App("Carformance", pages);
+                app.run();
+            });
+        </script>
+
     </head>
     <body>
         <!-- Kopfbereich der App -->
@@ -31,32 +58,29 @@
                 <!-- Logo, Zurück-Button und Titel der Seite -->
                 <img class="logo" src="logo.png" alt="Logo" />
 
-                <ul class="menu-left">
-                    <li class="go-back">
+                <ul class="tab-buttons">
+                    <li>
                         <a href="#">
-                            <i class="icon-left-open"></i>
-                            <span class="page-name">Name der Seite</span>
+                            <span class="page-name">Startseite</span>
                         </a>
                     </li>
-                    <li class="dont-go-back hidden">
-                        <span class="page-name">Name der Seite</span>
-                    </li>
-                    <li class="toggle-menu small-screen-only">
-                        <a href="#">
-                            <i class="icon-menu"></i>
+                    <li>
+                        <a href="#Modelle">
+                            <span class="page-name"> Modelle</span>
                         </a>
                     </li>
-                </ul>
-
-                <!-- Übergreifendes App-Menü -->
-                <ul class="menu-right">
-                    <!-- TODO: Inhalte definieren -->
+                    <li>
+                        <a href="#Standorte">
+                            <span class="page-name">Standorte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Carsharing">
+                            <span class="page-name">Carsharing</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-
-            <div class="content">
-                Inhalt des Kopfbereichs
-            </div>
         </header>
 
         <!-- Hauptbereich mit dem Inhalt der einzelnen Seiten -->
