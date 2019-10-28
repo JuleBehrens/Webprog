@@ -27,7 +27,15 @@ class PageModelle {
             console.error("Fehler beim Laden des HTML/CSS-Inhalts");
             return;
         }
-
+        let standor = await database.selectallstandorte();
+        let ol = document.createElement("ol");
+        standor.forEach(s => {
+            let li=document.createElement("li");
+            let text = document.createTextNode(s.PLZ);
+            li.appendChild(text);
+            ol.appendChild(li);
+        });
+        html = html.replace(/{STAPELLAUF}/g, ol.innerHTML);
         // Seite zur Anzeige bringen
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
