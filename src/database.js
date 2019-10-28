@@ -14,84 +14,38 @@ class Database {
      * Konstruktor.
      */
     constructor() {
-        this._data = [
-            {
-                id:          1,
-                img:        "boats/1.jpg",
-                name:       "Petrine",
-                typ:        "Ewer",
-                stapellauf: 1909,
-                verbleib:   "In Fahrt",
-                link:       "https://de.wikipedia.org/wiki/Petrine",
-            },{
-                id:          2,
-                img:        "boats/2.jpg",
-                name:       "Falado",
-                typ:        "Brigatine",
-                stapellauf: 1968,
-                verbleib:   "Westlich von Island gesunken",
-                link:       "https://de.wikipedia.org/wiki/Falado_von_Rhodos",
-            },{
-                id:          3,
-                img:        "boats/3.jpg",
-                name:       "Gorch Fock",
-                typ:        "Segelschiff",
-                stapellauf: 1958,
-                verbleib:   "In Fahrt",
-                link:       "https://de.wikipedia.org/wiki/Gorch_Fock_(Schiff,_1958)",
-            },{
-                id:          4,
-                img:        "boats/4.jpg",
-                name:       "Mare Frisium",
-                typ:        "Dreimastmarstoppsegelschoner",
-                stapellauf: 1916,
-                verbleib:   "In Fahrt",
-                link:       "https://de.wikipedia.org/wiki/Mare_Frisium",
-            },{
-                id:          5,
-                img:        "boats/5.jpg",
-                name:       "Preußen",
-                typ:        "Frachtsegler",
-                stapellauf: 1902,
-                verbleib:   "Kollision im Ärmelkanal",
-                link:       "https://de.wikipedia.org/wiki/Preu%C3%9Fen_(Schiff,_1902)",
-            },{
-                id:          6,
-                img:        "boats/6.jpg",
-                name:       "HMS Victory",
-                typ:        "Linienschiff",
-                stapellauf: 1765,
-                verbleib:   "Museum im Portsmouth",
-                link:       "https://de.wikipedia.org/wiki/HMS_Victory",
-            },{
-                id:          7,
-                img:        "boats/7.jpg",
-                name:       "Schulschiff Deutschland",
-                typ:        "Segelschulschiff",
-                stapellauf: 1927,
-                verbleib:   "Kulturdenkmal in Bremen-Vegesack",
-                link:       "https://de.wikipedia.org/wiki/Schulschiff_Deutschland",
-            },
-        ];
-    }
+      // Diese Informationen müssen aus der Firebase-Konsole ermittelt
+      // werden, indem dort ein neues Projekt mit einer neuen Datenbank
+      // angelegt und diese dann mit einer neuen App verknüpft wird.
+      try {
+        firebase.initializeApp({
+          apiKey: "AIzaSyAH-CKKLzp_JbF2MS5Kjn_nNPnkcGBhnXk",
+          authDomain: "carformance.firebaseapp.com",
+          databaseURL: "https://carformance.firebaseio.com",
+          projectId: "carformance",
+          storageBucket: "carformance.appspot.com",
+          messagingSenderId: "1032632808382",
+          appId: "1:1032632808382:web:38f0c5389f61270963bfef",
+          measurementId: "G-6LT1NDFN8P"
+        });
+      } catch (e) {
 
-    /**
-     * Diese Methode sucht einen Datensazt anhand seiner ID in der Datenbank
-     * und liefert den ersten, gefundenen Treffer zurück.
-     *
-     * @param  {Number} id Datensatz-ID
-     * @return {Object} Gefundener Datensatz
-     */
-    getRecordById(id) {
-        id = parseInt(id);
-        return this._data.find(r => r.id === id);
-    }
+      }
 
-    /**
-     * Diese Methode gibt eine Liste mit allen Datensätzen zurück.
-     * @return {Array} Liste aller Datensätze
-     */
-    getAllRecords() {
-        return this._data;
+      //   firebase.analytics();
+      // Dieses Objekt dient dem eigentlichen Datenbankzugriff.
+      // Dabei können beliebig viele "Collections" angesprochen werden,
+      // die in etwa den Tabellen einer klassischen Datenbank entsprechen.
+      this._db = firebase.firestore();
+      this._standorte = this._db.collection("standorte");
+    }
+    async selectallstandorte(){
+      let result = await this._standorte.orderBy("PLZ").get();
+      let standorte = [];
+      result.forEach(entry => {
+        let standort = entry.data();
+        standorte.push(standort);
+      });
+      return standorte;
     }
 }
