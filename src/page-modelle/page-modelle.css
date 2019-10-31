@@ -1,0 +1,16 @@
+.modelle{
+    border: 5px solid black;
+    margin: 10px;
+    width: 15em;
+}
+
+.cont{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.modelle img{
+    width: 15em;
+    max-width: 100%;
+}
