@@ -81,7 +81,7 @@ class PageModelle {
     }
 }
 
-function _filter() {
+async function _filter() {
     window.alert ("f");
 
     let html = await fetch("page-modelle/page-modelle.html");
@@ -123,8 +123,8 @@ function _filter() {
     });
     mainElement.innerHTML = mainElement.innerHTML.replace("{Modelle}",hallo.innerHTML);
     pageDom.querySelector("main").innerHTML += mainElement.innerHTML;
-    this._app.setPageCss(css);
-    this._app.setPageContent(pageDom.querySelector("main"));
+    _apps._app.setPageCss(css);
+    _apps._app.setPageContent(pageDom.querySelector("main"));
     document.querySelector('#filter').addEventListener('click', function() {
         _filter();
     });
