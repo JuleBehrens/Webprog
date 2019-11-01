@@ -16,7 +16,7 @@ class PageModelle {
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
      */
-    async show(matches) {
+    async show() {
         let html = await fetch("page-modelle/page-modelle.html");
         let css = await fetch("page-modelle/page-modelle.css");
 
@@ -52,13 +52,17 @@ class PageModelle {
         modelleListe.forEach(e => {
             let html = templateElement.innerHTML;
             html = html.replace("{SRC}", e.picsrc);
-            html = html.replace("{Name}", e.marke +" "+ e.name);
+            html = html.replace("{Name}", e.name);
+            html = html.replace("{Marke}", e.marke);
             html = html.replace("{Baujahr}", e.baujahr);
             html = html.replace("{Farbe}", e.farbe);
             html = html.replace("{PS}", e.ps);
             html = html.replace("{Preis}", e.tagespreis);
-            html = html.replace("{Automatik}", e.automatik);
-
+            if(e.automatik){
+                html = html.replace("{Automatik}", "Automatik");
+            }else {
+                html = html.replace("{Automatik}", "Manuell");
+            }
             hallo.innerHTML += html;
         });
         mainElement.innerHTML = mainElement.innerHTML.replace("{Modelle}",hallo.innerHTML);

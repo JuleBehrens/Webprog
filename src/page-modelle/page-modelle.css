@@ -1,7 +1,16 @@
 .modelle{
-    border: 5px solid black;
-    margin: 10px;
-    width: 15em;
+    border: 2px solid darkgrey;;
+    margin: 1em;
+    width: 16em;
+    background-color: lightgrey;
+    padding: 4px;
+    border-radius: 10px;
+    font-size: 13pt;
+}
+
+.modelle img{
+    width: 16em;
+    max-width: 100%;
 }
 
 .cont{
@@ -10,7 +19,7 @@
     width: 100%;
 }
 
-.modelle img{
-    width: 15em;
-    max-width: 100%;
+
+p{
+    margin: 2px;
 }

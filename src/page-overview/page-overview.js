@@ -15,7 +15,7 @@ class PageOverview {
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
      */
-     async show(matches) {
+     async show() {
          let html = await fetch("page-overview/page-overview.html");
          let css = await fetch("page-overview/page-overview.css");
 
