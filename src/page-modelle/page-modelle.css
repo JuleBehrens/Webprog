@@ -1,0 +1,25 @@
+.modelle{
+    border: 2px solid darkgrey;;
+    margin: 1em;
+    width: 16em;
+    background-color: lightgrey;
+    padding: 4px;
+    border-radius: 10px;
+    font-size: 13pt;
+}
+
+.modelle img{
+    width: 16em;
+    max-width: 100%;
+}
+
+.cont{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+p{
+    margin: 2px;
+}

@@ -1,8 +1,39 @@
-<header>
-    <h1>Hallo</h1>
-</header>
-
 <main>
-    guten tag Jonah
-    {STAPELLAUF}
+
 </main>
+
+<div id="h">
+    <p>
+        Modellübersicht
+    </p>
+    <div class="modellefilter">
+        <input type="text" name="name">
+        <input type="text" name="marke">
+        <input type="number" name="jahru">
+        <input type="number" name="jahro">
+        <input type="text" name="farbe">
+        <input type="number" name="psu">
+        <input type="number" name="pso">
+        <input type="number" name="preisu">
+        <input type="number" name="preiso">
+        <input type="checkbox" name="auto">
+        <button type="button" id="filter">Filtern!</button>
+    </div>
+    <div class="cont">
+        {Modelle}
+    </div>
+</div>
+
+
+<div id="blank">
+    <div class="modelle">
+        <img src="{SRC}" alt="" width="100%"/>
+        <p>Modell: {Name}</p>
+        <p>Marke: {Marke}</p>
+        <p>Baujahr: {Baujahr}</p>
+        <p>Farbe: {Farbe}</p>
+        <p>PS: {PS}</p>
+        <p>Preis: {Preis}€/Tag</p>
+        <p>Getriebe: {Automatik}</p>
+    </div>
+</div>

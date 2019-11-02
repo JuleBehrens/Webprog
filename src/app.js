@@ -84,7 +84,7 @@ class App {
         }
 
         this._currentPageObject = new page.klass(this);
-        this._currentPageObject.show(matches);
+        this._currentPageObject.show();
     }
 
     /**

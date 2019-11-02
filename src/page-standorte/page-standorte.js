@@ -15,7 +15,7 @@ class PageStandorte {
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
      */
-     async show(matches) {
+     async show() {
          let html = await fetch("page-standorte/page-standorte.html");
          let css = await fetch("page-standorte/page-standorte.css");
 

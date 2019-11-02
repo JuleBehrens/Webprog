@@ -38,6 +38,7 @@ class Database {
       // die in etwa den Tabellen einer klassischen Datenbank entsprechen.
       this._db = firebase.firestore();
       this._standorte = this._db.collection("standorte");
+      this._modelle = this._db.collection("modelle");
     }
     async selectallstandorte(){
       let result = await this._standorte.orderBy("PLZ").get();
@@ -47,5 +48,15 @@ class Database {
         standorte.push(standort);
       });
       return standorte;
+    }
+
+    async selectallmodelle(){
+      let result = await this._modelle.orderBy("tagespreis").get();
+      let modelle = [];
+      result.forEach(entry => {
+        let modell = entry.data();
+        modelle.push(modell);
+      });
+      return modelle;
     }
 }
