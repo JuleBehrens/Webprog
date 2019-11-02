@@ -1,1 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+  #suche{
+  background-color: rgba(200, 200, 200, 0.5)
+}
 
+  #angebot {
+    background-color: rgba(50, 90, 200, 0.3);
+  }
