@@ -1,11 +1,40 @@
-html, body {
+html, main {
     margin: 0;
+    border: 0;
     padding: 0;
 }
+
   #suche{
-  background-color: rgba(200, 200, 200, 0.5)
-}
+    padding-bottom: 2em;
+    padding-left: 4em;
+  }
 
   #angebot {
     background-color: rgba(50, 90, 200, 0.3);
+    padding-bottom: 2em;
+    padding-left: 4em;
+  }
+
+  button {
+    height: 2em;
+    width: 6em;
+    text-align:center;
+    padding: inherit;
+  }
+
+  button:hover{
+  background-color: rgba(250, 250, 250, 0.3);
+}
+
+  h1 {
+    text-align:left;
+    text-decoration: none;
+    color: rgb(50,90,200);
+}
+
+  h2 {
+    font-size: 1.9em;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(250,250,250);
   }
