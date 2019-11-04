@@ -13,7 +13,7 @@ class PageOverview {
     }
 
     /** Steuerung der Slideshow */
-    let myIndex = 0;
+    //let myIndex = 0;
     carousel() {
       let i;
       let x = document.getElementsByClassName("ofaSlideshowElements");
