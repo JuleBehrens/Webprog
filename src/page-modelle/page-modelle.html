@@ -3,32 +3,58 @@
 </main>
 
 <div id="h">
-    <p>
-        Modellübersicht
-    </p>
+    <div class="headerModelle">
+        Modelle
+    </div>
+    <div class="subheaderModelle">
+        Filteroptionen
+    </div>
     <div class="modellefilter">
-        Name:
-        <input type="text" id="name">
-        Marke:
-        <input type="text" id="marke">
-        Baujahr Untergrenze:
-        <input type="number" id="jahru">
-        Baujahr Obergrenze:
-        <input type="number" id="jahro">
-        Farbe:
-        <input type="text" id="farbe">
-        PS Untergrenze:
-        <input type="number" id="psu">
-        PS Obergrenze:
-        <input type="number" id="pso">
-        Preis Untergrenze:
-        <input type="number" id="preisu">
-        Preis Obergrenze:
-        <input type="number" id="preiso">
-        Automatik?
-        <input type="checkbox" id="auto">
+        <div class = "filter">
+            Name:
+            <input type="text" id="name">
+        </div>
+        <div class = "filter">
+            Marke:
+            <input type="text" id="marke">
+        </div>
+        <div class = "filter">
+            Baujahr (ältestes):
+            <input type="number" id="jahru">
+        </div>
+        <div class = "filter">
+            Baujahr (jüngstes):
+            <input type="number" id="jahro">
+        </div>
+        <div class = "filter">
+            Farbe:
+            <input type="text" id="farbe">
+        </div>
+        <div class = "filter">
+            PS (min):
+            <input type="number" id="psu">
+        </div>
+        <div class = "filter">
+            PS (max):
+            <input type="number" id="pso">
+        </div>
+        <div class = "filter">
+            Preis (min):
+            <input type="number" id="preisu">
+        </div>
+        <div class = "filter">
+            Preis (max):
+            <input type="number" id="preiso">
+        </div>
+        <div class = "filter">
+            Automatik?
+            <input type="checkbox" id="auto">
+        </div>
+    </div>
+    <div class ="butdiv">
         <button type="button" id="filter">Filtern!</button>
     </div>
+
     <div class="cont">
         {Modelle}
     </div>

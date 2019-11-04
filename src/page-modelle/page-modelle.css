@@ -1,5 +1,5 @@
 .modelle{
-    border: 2px solid darkgrey;;
+    border: 2px solid darkgrey;
     margin: 1em;
     width: 16em;
     background-color: lightgrey;
@@ -12,14 +12,46 @@
     width: 16em;
     max-width: 100%;
 }
-
+#filter{
+    background-color: darkgrey;
+    color: black;
+}
 .cont{
+    margin-top: 1em;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
-
-
+.headerModelle{
+    font-size: 20pt;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+.subheaderModelle{
+    font-size: 14pt;
+}
+.modellefilter{
+    border: 2px solid darkgrey;
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.butdiv{
+    padding: 4px;
+    width: 100%;
+}
+#filter{
+    width: 100%;
+}
+.filter{
+    border: 2px solid lightgrey;
+    margin: 0.2em;
+    background-color: white;
+    padding: 4px;
+    border-radius: 10px;
+    font-size: 13pt;
+}
 p{
     margin: 2px;
 }
