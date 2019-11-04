@@ -40,6 +40,7 @@ class Database {
       this._standorte = this._db.collection("standorte");
       this._modelle = this._db.collection("modelle");
     }
+    
     async selectallstandorte(){
       let result = await this._standorte.orderBy("PLZ").get();
       let standorte = [];
