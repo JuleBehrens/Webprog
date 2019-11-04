@@ -82,7 +82,16 @@ class PageModelle {
 }
 
 async function _filter() {
-    window.alert ("f");
+    let name = document.querySelector('#name').value;
+    let marke = document.querySelector('#marke').value;
+    let jahru = document.querySelector('#jahru').value;
+    let jahro = document.querySelector('#jahro').value;
+    let farbe = document.querySelector('#farbe').value;
+    let psu = document.querySelector('#psu').value;
+    let pso = document.querySelector('#pso').value;
+    let preisu = document.querySelector('#preisu').value;
+    let preiso = document.querySelector('#preiso').value;
+    let auto = document.querySelector('#auto').checked;
 
     let html = await fetch("page-modelle/page-modelle.html");
     let css = await fetch("page-modelle/page-modelle.css");
@@ -106,20 +115,22 @@ async function _filter() {
 
     let modelleListe = await database.selectallmodelle();
     modelleListe.forEach(e => {
-        let html = templateElement.innerHTML;
-        html = html.replace("{SRC}", e.picsrc);
-        html = html.replace("{Name}", e.name);
-        html = html.replace("{Marke}", e.marke);
-        html = html.replace("{Baujahr}", e.baujahr);
-        html = html.replace("{Farbe}", e.farbe);
-        html = html.replace("{PS}", e.ps);
-        html = html.replace("{Preis}", e.tagespreis);
-        if(e.automatik){
-            html = html.replace("{Automatik}", "Automatik");
-        }else {
-            html = html.replace("{Automatik}", "Manuell");
+        if((auto === e.automatik || auto === false) &&(name === e.name || name === "") &&(marke === e.marke || marke === "") && (farbe === e.farbe || farbe === "") && (jahro >= e.baujahr || jahro === "") && (jahru <= e.baujahr || jahru === "")&& (preiso >= e.tagespreis || preiso === "") && (preisu <= e.tagespreis || preisu === "")&& (pso >= e.ps || pso === "") && (psu <= e.ps || psu === "")) {
+            let html = templateElement.innerHTML;
+            html = html.replace("{SRC}", e.picsrc);
+            html = html.replace("{Name}", e.name);
+            html = html.replace("{Marke}", e.marke);
+            html = html.replace("{Baujahr}", e.baujahr);
+            html = html.replace("{Farbe}", e.farbe);
+            html = html.replace("{PS}", e.ps);
+            html = html.replace("{Preis}", e.tagespreis);
+            if(e.automatik){
+                html = html.replace("{Automatik}", "Automatik");
+            }else {
+                html = html.replace("{Automatik}", "Manuell");
+            }
+            hallo.innerHTML += html;
         }
-        hallo.innerHTML += html;
     });
     mainElement.innerHTML = mainElement.innerHTML.replace("{Modelle}",hallo.innerHTML);
     pageDom.querySelector("main").innerHTML += mainElement.innerHTML;
@@ -128,4 +139,15 @@ async function _filter() {
     document.querySelector('#filter').addEventListener('click', function() {
         _filter();
     });
+
+    document.querySelector('#name').value = name;
+    document.querySelector('#marke').value= marke;
+    document.querySelector('#jahru').value= jahru;
+    document.querySelector('#jahro').value= jahro;
+    document.querySelector('#farbe').value= farbe;
+    document.querySelector('#psu').value= psu;
+    document.querySelector('#pso').value= pso;
+    document.querySelector('#preisu').value= preisu;
+    document.querySelector('#preiso').value= preiso;
+    document.querySelector('#auto').checked= auto;
 }
