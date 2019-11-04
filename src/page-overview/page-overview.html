@@ -1,37 +1,57 @@
 <!-- HTML für die Startseite -->
 
-<!DOCTYPE html>
-
-<html lang="en" dir="ltr">
-
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="page-overview.css">
-  </head>
-
-  <body>
-    <nav> <!-- Navigation zwischen den Seiten (Reiter) -->
-      <ul>
-        <li>Schnaider AG</li>
-        <li><a href="#mieten">Mieten</a></li>
-        <li><a href="#carsharing">Carsharing</a></li>
-        <li><a href="#standorte">Standorte</a></li>
-      </ul>
-    </nav>
-    <div id="angebote"> <!-- Bilder-Durchlauf für Angebote -->
-
+  <main>
+    <!-- Bilder-Durchlauf für Angebote -->
+    <div id="angebote">
+      <img class="ofaSlideshowElements ofaSlideshowAnimation" src="AutoPlusHeli.jpeg" style="cursor:pointer; width:300px;" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)">
+      <img class="ofaSlideshowElements ofaSlideshowAnimation" src="KinderPreise.jpeg" style="cursor:pointer; width:300px;" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)">
+      <img class="ofaSlideshowElements ofaSlideshowAnimation" src="ZweiZumPreisVonDrei.jpeg" style="cursor:pointer; width:300px;" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)">
     </div>
-    <div id="formular"> <!-- Formular für Kontaktaufnahme -->
 
+    <!-- Formular für Kontaktaufnahme -->
+    <div id="überschrift">
+      Kontaktformular:
     </div>
-    <div id="impressum"> <!-- Impressums-Zeile am unteren Bildschirmrand -->
-      <ul>
-        <li>Impressum</li>
-        <li>Lückenfüller</li>
-        <li>Hilfe</li>
-      </ul>
-    </div>
-  </body>
 
-</html>
+    <div id="name" class="felder">
+      Name:
+      <input type="text" name="Name">
+    </div>
+    <div id="vorname" class="felder">
+      Vorname:
+      <input type="text" name="Vorname">
+    </div>
+    <div id="land" class="felder">
+      Land:
+      <input type="text" name="Land">
+    </div>
+    <div id="plz" class="felder">
+      PLZ:
+      <input type="number" name="PLZ">
+    </div>
+    <div id="ort" class="felder">
+      Ort:
+      <input type="text" name="Ort">
+    </div>
+    <div id="straße" class="felder">
+      Straße:
+      <input type="text" name="Straße">
+    </div>
+    <div id="mail" class="felder">
+      Mail:
+      <input type="text" name="Mail">
+    </div>
+    <div id="telefon" class="felder">
+      Telefon:
+      <input type="number" name="Telefon">
+    </div>
+    <div id="anliegen" class="felder">
+      Anliegen:
+      <input type="text" name="Anliegen">
+    </div>
+
+    <div id="button">
+      <button type="button" id="senden">Anfrage senden!</button>
+    </div>
+
+  </main>
