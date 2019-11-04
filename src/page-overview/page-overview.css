@@ -1,59 +1,31 @@
 /** CSS-Stylesheet für die Startseite */
 
-body{
-  margin: 0;
+<style>
+.ofaSlideshowElements {display:none;}
+.ofaSlideshowAnimation {position: relative; animation: ofaSlideshowAnimation 10s;}
+@keyframes ofaSlideshowanimation {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+</style>
+
+.angebote{
+
 }
 
-nav, div{
-  margin: 0;
-  padding: 0;
-  color: #FFFFFF;
-  height: 60px;
-  background-color: #373837;
+.überschrift{
+  font-size: 40px;
 }
 
-ul{
-  margin: 0;
-  padding: 0;
+.felder{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-nav a{
-  font-size: 20pt;
-  margin: 0;
-  padding: 0;
-  color: white;
-  text-decoration: none;
-}
-
-div li, div a{
-  list-style-type: none;
-  float: left;
-  margin: 2px 500px 5px 10px;
-}
-
-nav li, div li{
-  list-style-type: none;
-  float: left;
-  margin: 15px 40px 15px 10px;
-}
-
-#angebote{
-  margin: 0;
-  padding: 0;
-  height: 400px;
-  background-color: #77777777;
-}
-
-#formular{
-  margin: 0;
-  padding: 0;
-  height: 340px;
-  background-color: #22222222;
-}
-
-#impressum{
-  margin: 0;
-  padding: 0;
-  height: 40px;
-  background-color: #373837;
+.button{
+  display: flex;
+  flex-wrap: wrap;
 }
