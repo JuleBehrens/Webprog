@@ -38,7 +38,10 @@ class PageStandorte {
          this._app.setPageCss(css);
 
          this._app.setPageContent(pageDom.querySelector("main"));
-           document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
+        document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
+        document.querySelector("#muenchenonclick").addEventListener("click", function(){muenchenfunc();});
+        document.querySelector("#landauonclick").addEventListener("click", function(){landaufunc();});
+        document.querySelector("#saarbrueckenonclick").addEventListener("click", function(){saarbrueckenfunc();});
      }
 
 
@@ -56,7 +59,6 @@ class PageStandorte {
 //}
 
 async function karlsruhefunc() { // Declare a function
-  document.getElementById("karlsruheonclick").setID;
 
   let html = await fetch("page-standorte/page-standorte.html");
   let css = await fetch("page-standorte/page-standorte.css");
@@ -71,16 +73,17 @@ async function karlsruhefunc() { // Declare a function
 
   // Seite zur Anzeige bringen
   let pageDom = document.createElement("div");
-  html.replace("mapsURL", "https://maps.google.de/maps?hl=de&q=%20Erzbergeerstraße%20Karlsruhe&t=&z=10&ie=utf8&iwloc=b&output=embed");
   pageDom.innerHTML = html;
-  let hhcblks = pageDom.querySelector("#mapsStandort").innerHTML;
+  let hhcblks = pageDom.querySelector("#mapsStandortKA").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
 
   this._app.setPageCss(css);
 
   this._app.setPageContent(pageDom.querySelector("main"));
-    document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
+    document.querySelector("#karlsruheonclick").addEventListener("click", function(){
+      karlsruhefunc();
+    });
 
 
 }
@@ -91,7 +94,6 @@ async function karlsruhefunc() { // Declare a function
 
 
 async function muenchenfunc() { // Declare a function
-  document.getElementById("muenchenonclick").setID;
 
   let html = await fetch("page-standorte/page-standorte.html");
   let css = await fetch("page-standorte/page-standorte.css");
@@ -106,9 +108,8 @@ async function muenchenfunc() { // Declare a function
 
   // Seite zur Anzeige bringen
   let pageDom = document.createElement("div");
-  html.replace("mapsURL", "https://www.google.de/maps/place/M%C3%BCnchen/");
   pageDom.innerHTML = html;
-  let hhcblks = pageDom.querySelector("#mapsStandort").innerHTML;
+  let hhcblks = pageDom.querySelector("#mapsStandortM").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
 
@@ -122,7 +123,6 @@ async function muenchenfunc() { // Declare a function
 
 
 async function landaufunc() { // Declare a function
-  document.getElementById("landauonclick").setID;
 
   let html = await fetch("page-standorte/page-standorte.html");
   let css = await fetch("page-standorte/page-standorte.css");
@@ -137,9 +137,8 @@ async function landaufunc() { // Declare a function
 
   // Seite zur Anzeige bringen
   let pageDom = document.createElement("div");
-  html.replace("mapsURL", "https://www.google.com/search?client=firefox-b-d&q=landau+maps#");
   pageDom.innerHTML = html;
-  let hhcblks = pageDom.querySelector("#mapsStandort").innerHTML;
+  let hhcblks = pageDom.querySelector("#mapsStandortLD").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
 
@@ -171,7 +170,7 @@ async function saarbrueckenfunc() { // Declare a function
   let pageDom = document.createElement("div");
   html.replace("mapsURL", "https://www.google.de/maps/place/Saarbr%C3%BCcken/");
   pageDom.innerHTML = html;
-  let hhcblks = pageDom.querySelector("#mapsStandort").innerHTML;
+  let hhcblks = pageDom.querySelector("#mapsStandortSA").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
 
