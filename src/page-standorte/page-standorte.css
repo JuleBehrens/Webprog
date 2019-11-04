@@ -75,10 +75,7 @@ tableStandorte {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #dadada;}
 
-.googlemaps{
-      width: 300px;
-      height: 300px;
-}
+
 iframe{
 max-width: 100%;
 max-height: 100%;
