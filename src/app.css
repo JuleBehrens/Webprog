@@ -182,7 +182,7 @@ header .content h6 {
 
     .logo {
         display: inline-block !important;
-
+        margin-right: 1em;
         height: 2em;
         padding-right: var(--content-padding);
     }
