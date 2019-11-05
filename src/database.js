@@ -29,10 +29,7 @@ class Database {
           measurementId: "G-6LT1NDFN8P"
         });
       } catch (e) {
-
       }
-
-      //   firebase.analytics();
       // Dieses Objekt dient dem eigentlichen Datenbankzugriff.
       // Dabei können beliebig viele "Collections" angesprochen werden,
       // die in etwa den Tabellen einer klassischen Datenbank entsprechen.
@@ -40,7 +37,7 @@ class Database {
       this._standorte = this._db.collection("standorte");
       this._modelle = this._db.collection("modelle");
     }
-    
+
     async selectallstandorte(){
       let result = await this._standorte.orderBy("PLZ").get();
       let standorte = [];
