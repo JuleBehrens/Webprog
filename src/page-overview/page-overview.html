@@ -2,55 +2,55 @@
 
   <main>
     <!-- Bilder-Durchlauf für Angebote -->
-    <div id="angebote">
-      <img class="ofaSlideshowElements ofaSlideshowAnimation" src="res\pictures\startseite\AutoPlusHeli.jpeg" style="cursor:pointer; width:300px;" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)">
-      <img class="ofaSlideshowElements ofaSlideshowAnimation" src="res\pictures\startseite\KinderPreise.jpeg" style="cursor:pointer; width:300px;" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)">
-      <img class="ofaSlideshowElements ofaSlideshowAnimation" src="res\pictures\startseite\ZweiZumPreisVonDrei.jpeg" style="cursor:pointer; width:300px;" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)">
+    <div class="angebote">
+      <img class="SlideshowElements SlideshowAnimation" src="res\pictures\startseite\AutoPlusHeli.jpeg" style="cursor:pointer" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)">
+      <!-- <img class="SlideshowElements SlideshowAnimation" src="res\pictures\startseite\KinderPreise.jpeg" style="cursor:pointer" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)"> -->
+      <!-- <img class="SlideshowElements SlideshowAnimation" src="res\pictures\startseite\ZweiZumPreisVonDrei.jpeg" style="cursor:pointer" onclick="window.open(http://127.0.0.1:3000/src/#/Angebote/)"> -->
     </div>
 
     <!-- Formular für Kontaktaufnahme -->
-    <div id="überschrift">
+    <div class="überschrift">
       Kontaktformular:
     </div>
+    <div class="felder">
+      <!-- Linke Spalte -->
+      <div class="linkespalte">
+        <div id="name">
+          <input type="text" name="Name" placeholder="Name">
+        </div>
+        <div id="plz">
+          <input type="number" name="PLZ" placeholder="PLZ">
+        </div>
+        <div id="straße">
+          <input type="text" name="Straße" placeholder="Straße">
+        </div>
+        <div id="mail">
+          <input type="text" name="Mail" placeholder="E-Mail">
+        </div>
+      </div>
 
-    <div id="name" class="felder">
-      Name:
-      <input type="text" name="Name">
-    </div>
-    <div id="vorname" class="felder">
-      Vorname:
-      <input type="text" name="Vorname">
-    </div>
-    <div id="land" class="felder">
-      Land:
-      <input type="text" name="Land">
-    </div>
-    <div id="plz" class="felder">
-      PLZ:
-      <input type="number" name="PLZ">
-    </div>
-    <div id="ort" class="felder">
-      Ort:
-      <input type="text" name="Ort">
-    </div>
-    <div id="straße" class="felder">
-      Straße:
-      <input type="text" name="Straße">
-    </div>
-    <div id="mail" class="felder">
-      Mail:
-      <input type="text" name="Mail">
-    </div>
-    <div id="telefon" class="felder">
-      Telefon:
-      <input type="number" name="Telefon">
-    </div>
-    <div id="anliegen" class="felder">
-      Anliegen:
-      <input type="text" name="Anliegen">
+      <!-- Rechte Spalte -->
+      <div class="rechtespalte">
+        <div id="vorname">
+          <input type="text" name="Vorname" placeholder="Vorname">
+        </div>
+        <div id="ort">
+          <input type="text" name="Ort" placeholder="Ort">
+        </div>
+        <div id="hausnummer">
+          <input type="number" name="Hausnummer" placeholder="Hausnummer">
+        </div>
+        <div id="telefon">
+          <input type="number" name="Telefon" placeholder="Telefon">
+        </div>
+      </div>
+
+      <div class="anliegen">
+        <input type="Anliegen" name="Anliegen" placeholder="Anliegen" id="anliegen">
+      </div>
     </div>
 
-    <div id="button">
+    <div class="button">
       <button type="button" id="senden">Anfrage senden!</button>
     </div>
 

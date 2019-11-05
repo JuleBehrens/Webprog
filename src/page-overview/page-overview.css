@@ -1,30 +1,63 @@
 /** CSS-Stylesheet für die Startseite */
 
-<style>
-.ofaSlideshowElements {display:none;}
-.ofaSlideshowAnimation {position: relative; animation: ofaSlideshowAnimation 10s;}
-@keyframes ofaSlideshowanimation {
+/**.SlideshowElements {display:none;}
+.SlideshowAnimation {position: relative; animation: SlideshowAnimation 10s;}
+@keyframes SlideshowAnimation {
   0% {opacity: 0;}
   20% {opacity: 1;}
   90% {opacity: 1;}
   100% {opacity: 0;}
-}
-</style>
+} */
 
-.angebote{
-
+.angebote img{
+  width: 100%;
 }
 
 .überschrift{
-  font-size: 40px;
+  text-align: center;
+  font-size: 25pt;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .felder{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  /**flex-direction: column;*/
+}
+.felder input{
+  width: 18em;
+  font-size: 20pt;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.linkespalte{
+  flex: 50%;
+  text-align: right;
+}
+
+.rechtespalte {
+  flex: 50%;
+  text-align: left;
+}
+
+.anliegen{
+  text-align: center;
+  margin: 0.5em;
+}
+
+#anliegen{
+  height: 3em;
+  width: 37em;
+  text-align: center;
 }
 
 .button{
-  width: 100%;
+  margin-top: 2em;
+  text-align: center;
+  font-size: 12pt;
 }

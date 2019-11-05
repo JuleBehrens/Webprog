@@ -12,17 +12,19 @@ class PageOverview {
         this._app = app;
     }
 
-    /** Steuerung der Slideshow */
-    //let myIndex = 0;
+    /** Steuerung der Slideshow
+    carousel();
+    var myIndex = 0;
     carousel() {
       let i;
-      let x = document.getElementsByClassName("ofaSlideshowElements");
+      let x = document.getElementsByClassName("SlideshowElements");
       for (i = 0; i < x.length; i++) { x[i].style.display = "none";}
       myIndex++;
       if (myIndex > x.length) {myIndex = 1};
       x[myIndex-1].style.display = "block";
       setTimeout(carousel, 10000);
     }
+    */
 
      /** Seite anzeigen. Wird von der App-Klasse aufgerufen. */
      async show() {
@@ -47,6 +49,6 @@ class PageOverview {
          this._app.setPageContent(pageDom.querySelector("main"));
 
          //Slideshow
-         carousel();
+        carousel();
      }
 }
