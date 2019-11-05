@@ -5,16 +5,12 @@
     background-color: lightgrey;
     padding: 4px;
     border-radius: 10px;
-    font-size: 13pt;
+    font-size: 15pt;
+    line-height: 0.9;
 }
-
 .modelle img{
     width: 16em;
     max-width: 100%;
-}
-#filter{
-    background-color: darkgrey;
-    color: black;
 }
 .cont{
     margin-top: 1em;
@@ -28,7 +24,7 @@
     margin-bottom: 1em;
 }
 .subheaderModelle{
-    font-size: 14pt;
+    font-size: 15pt;
 }
 .modellefilter{
     border: 2px solid darkgrey;
@@ -40,18 +36,30 @@
 .butdiv{
     padding: 4px;
     width: 100%;
+    text-align: center;
 }
 #filter{
-    width: 100%;
-}
+    background-color: darkgrey;
+    color: black;
+    line-height: 0.1;
+    }
 .filter{
     border: 2px solid lightgrey;
     margin: 0.2em;
     background-color: white;
     padding: 4px;
     border-radius: 10px;
-    font-size: 13pt;
 }
-p{
-    margin: 2px;
+.filter input{
+  width: 18em;
+  font-size: 15pt;
+  margin-left: 0.5em;
+}
+.filtercheck{
+    font-size: 15pt;
+    border: 2px solid lightgrey;
+    margin: 0.2em;
+    background-color: white;
+    padding: 4px;
+    border-radius: 10px;
 }
