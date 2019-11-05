@@ -6,25 +6,25 @@ tableStandorte {
   width: 100%; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #dadada; /* Add a grey border */
+  border: 5px solid black; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
 
 #standorte {
   border-collapse: collapse; /* Collapse borders */
   width: 100%; /* Full-width */
-  border: 1px solid #dadada; /* Add a grey border */
+  border: 5px solid black; /* Add a grey border */
   font-size: 18px; /* Increase font-size */
 }
 
 #myTable th, #myTable td {
   text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
+  padding: 10%; /* Add padding */
 }
 
 #myTable tr {
   /* Add a bottom border to all table rows */
-  border-bottom: 1px solid #ddd;
+  border-bottom: 5px solid black;
 }
 
 #myTable tr.header, #myTable tr:hover {
@@ -75,6 +75,17 @@ tableStandorte {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #dadada;}
 
+.button-content{
+  background-color: green;
+  border: none;
+  color: dadada;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
 
 iframe{
 max-width: 100%;
