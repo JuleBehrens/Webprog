@@ -17,7 +17,7 @@
   text-align: center;
   font-size: 25pt;
   margin-top: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -52,7 +52,7 @@
 .button{
   margin: 2em;
   text-align: center;
-  font-size: 12pt;
+  font-size: 14pt;
 }
 
 #senden{
