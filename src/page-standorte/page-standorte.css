@@ -8,6 +8,9 @@ tableStandorte {
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 5px solid black; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+  -webkit-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+-moz-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
 }
 
 #standorte {
@@ -15,21 +18,33 @@ tableStandorte {
   width: 100%; /* Full-width */
   border: 5px solid black; /* Add a grey border */
   font-size: 18px; /* Increase font-size */
+  -webkit-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+-moz-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
 }
 
 #myTable th, #myTable td {
   text-align: left; /* Left-align text */
   padding: 10%; /* Add padding */
+  -webkit-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+-moz-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
 }
 
 #myTable tr {
   /* Add a bottom border to all table rows */
   border-bottom: 5px solid black;
+  -webkit-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+-moz-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
 }
 
 #myTable tr.header, #myTable tr:hover {
   /* Add a grey background color to the table header and on hover */
   background-color: #dadada;
+  -webkit-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+-moz-box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
+box-shadow: 0px 0px 300px 72px rgba(227,15,0,1);
 }
 }
 

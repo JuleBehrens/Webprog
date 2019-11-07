@@ -3,6 +3,7 @@
 /**
  * Klasse PageOverview: Stellt die Startseite der App zur Verfügung
  */
+ let _jens;
 class PageStandorte {
     /**
      * Konstruktor
@@ -30,14 +31,12 @@ class PageStandorte {
          // Seite zur Anzeige bringen
          let pageDom = document.createElement("div");
          pageDom.innerHTML = html;
-         let hhcblks = pageDom.querySelector("#mapsStandort").innerHTML;
+         let hhcblks = pageDom.querySelector("#mapsStandortKA").innerHTML;
          pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
-
-
          this._app.setPageCss(css);
-
          this._app.setPageContent(pageDom.querySelector("main"));
+         _jens = this;
         document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
         document.querySelector("#muenchenonclick").addEventListener("click", function(){muenchenfunc();});
         document.querySelector("#landauonclick").addEventListener("click", function(){landaufunc();});
@@ -59,7 +58,6 @@ class PageStandorte {
 //}
 
 async function karlsruhefunc() { // Declare a function
-
   let html = await fetch("page-standorte/page-standorte.html");
   let css = await fetch("page-standorte/page-standorte.css");
 
@@ -77,14 +75,12 @@ async function karlsruhefunc() { // Declare a function
   let hhcblks = pageDom.querySelector("#mapsStandortKA").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
-
-  this._app.setPageCss(css);
-
-  this._app.setPageContent(pageDom.querySelector("main"));
-    document.querySelector("#karlsruheonclick").addEventListener("click", function(){
-      karlsruhefunc();
-    });
-
+  _jens._app.setPageCss(css);
+  _jens._app.setPageContent(pageDom.querySelector("main"));
+ document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
+ document.querySelector("#muenchenonclick").addEventListener("click", function(){muenchenfunc();});
+ document.querySelector("#landauonclick").addEventListener("click", function(){landaufunc();});
+ document.querySelector("#saarbrueckenonclick").addEventListener("click", function(){saarbrueckenfunc();});
 
 }
 
@@ -112,11 +108,12 @@ async function muenchenfunc() { // Declare a function
   let hhcblks = pageDom.querySelector("#mapsStandortM").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
-
-  this._app.setPageCss(css);
-
-  this._app.setPageContent(pageDom.querySelector("main"));
-    document.querySelector("#muenchenonclick").addEventListener("click", function(){muenchenfunc();});
+  _jens._app.setPageCss(css);
+  _jens._app.setPageContent(pageDom.querySelector("main"));
+ document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
+ document.querySelector("#muenchenonclick").addEventListener("click", function(){muenchenfunc();});
+ document.querySelector("#landauonclick").addEventListener("click", function(){landaufunc();});
+ document.querySelector("#saarbrueckenonclick").addEventListener("click", function(){saarbrueckenfunc();});
 }
 
 
@@ -141,11 +138,13 @@ async function landaufunc() { // Declare a function
   let hhcblks = pageDom.querySelector("#mapsStandortLD").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
+  _jens._app.setPageCss(css);
+  _jens._app.setPageContent(pageDom.querySelector("main"));
 
-  this._app.setPageCss(css);
-
-  this._app.setPageContent(pageDom.querySelector("main"));
-    document.querySelector("#landauonclick").addEventListener("click", function(){landaufunc();});
+ document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
+ document.querySelector("#muenchenonclick").addEventListener("click", function(){muenchenfunc();});
+ document.querySelector("#landauonclick").addEventListener("click", function(){landaufunc();});
+ document.querySelector("#saarbrueckenonclick").addEventListener("click", function(){saarbrueckenfunc();});
 }
 
 
@@ -153,8 +152,6 @@ async function landaufunc() { // Declare a function
 
 
 async function saarbrueckenfunc() { // Declare a function
-  document.getElementById("saarbrueckenonclick").setID;
-
   let html = await fetch("page-standorte/page-standorte.html");
   let css = await fetch("page-standorte/page-standorte.css");
 
@@ -168,14 +165,14 @@ async function saarbrueckenfunc() { // Declare a function
 
   // Seite zur Anzeige bringen
   let pageDom = document.createElement("div");
-  html.replace("mapsURL", "https://www.google.de/maps/place/Saarbr%C3%BCcken/");
   pageDom.innerHTML = html;
   let hhcblks = pageDom.querySelector("#mapsStandortSA").innerHTML;
   pageDom.innerHTML=pageDom.innerHTML.replace("{mapsURL}", hhcblks);
 
-
-  this._app.setPageCss(css);
-
-  this._app.setPageContent(pageDom.querySelector("main"));
-    document.querySelector("#saarbrueckenonclick").addEventListener("click", function(){saarbrueckenfunc();});
+  _jens._app.setPageCss(css);
+  _jens._app.setPageContent(pageDom.querySelector("main"));
+ document.querySelector("#karlsruheonclick").addEventListener("click", function(){karlsruhefunc();});
+ document.querySelector("#muenchenonclick").addEventListener("click", function(){muenchenfunc();});
+ document.querySelector("#landauonclick").addEventListener("click", function(){landaufunc();});
+ document.querySelector("#saarbrueckenonclick").addEventListener("click", function(){saarbrueckenfunc();});
 }

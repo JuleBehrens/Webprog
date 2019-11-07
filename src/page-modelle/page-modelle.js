@@ -75,19 +75,6 @@ class PageModelle {
         document.querySelector('#filter').addEventListener('click', function(event) {
             _filter();
         });
-        document.querySelector('#filereinblenden').addEventListener('click', function() {
-            let a = document.querySelectorAll('.bgscreen');
-            a.forEach(b=>{
-                if (b.classList.contains("bgscreen")) {
-                    b.classList.remove("bgscreen");
-                } else {
-                    b.classList.add("bgscreen");
-                }
-            });
-            if (event) {
-                event.preventDefault();
-            }
-        });
     }
 }
 
