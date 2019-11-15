@@ -68,12 +68,16 @@ class Database {
       return carsharing.reverse();
     }
     async savefahrt(start, ende, datum, uhrzeit, kontakt){
-      _carsharing.doc("gf").set({
+      let saved = true;
+      this._carsharing.add({
         datum: datum,
         kontakt: kontakt,
         startort: start,
         uhrezeit: uhrzeit,
         zielort: ende
+      }).catch(function(error){
+        saved = false;
       });
+      return saved;
     }
 }

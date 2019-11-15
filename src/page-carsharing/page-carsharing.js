@@ -49,17 +49,23 @@ class PageCarsharing {
 
 async function _anbieten() {
   let start = document.querySelector("#start").value;
-  let ende = document.querySelector("#ziel").value;
+  let ende = document.querySelector("#ende").value;
   let datum = document.querySelector("#datum").value;
   let uhrzeit = document.querySelector("#uhrzeit").value;
   let kontakt = document.querySelector("#kontakt").value;
 
-  await database.savefahrt(start, ende, datum, uhrzeit, kontakt);
-
-  alert("bv");
+  let saved = await database.savefahrt(start, ende, datum, uhrzeit, kontakt);
+  if(saved){
+    alert("saved");
+  }else{
+    alert("unsaved");
+  }
 }
 
 async function _suchen() {
+  let startsuche = document.querySelector("#startsuche").value;
+  let zielsuche = document.querySelector("#zielsuche").value;
+
   let html = await fetch("page-carsharing/page-carsharing.html");
   let css = await fetch("page-carsharing/page-carsharing.css");
 
@@ -80,6 +86,7 @@ let allezeilen = "";
 
   let fahrtenliste = await database.selectallcarsharing();
   fahrtenliste.forEach(fahrt =>{
+    if(startsuche === fahrt.startort && document.querySelector("#zielsuche").value === fahrt.zielort){
       let z = zeile.innerHTML;
       z = z.replace("{datum}", fahrt.datum);
       z = z.replace("{uhrzeit}", fahrt.uhrzeit);
@@ -89,7 +96,7 @@ let allezeilen = "";
       z = z.replace("</tbody>", "");
       z = z.replace("</table>", "");
       allezeilen += z;
-  })
+  }})
 
 tab.innerHTML = tab.innerHTML.replace("<td></td>", allezeilen);
   // Seite zur Anzeige bringen
@@ -106,5 +113,9 @@ tab.innerHTML = tab.innerHTML.replace("<td></td>", allezeilen);
   document.querySelector("#suchknopf").addEventListener("click", function(event){
     _suchen();
   });
-
+  document.querySelector("#anbietenknopf").addEventListener("click", function(event){
+    _anbieten();
+  });
+document.querySelector("#startsuche").value = startsuche;
+document.querySelector("#zielsuche").value = zielsuche;
 }
