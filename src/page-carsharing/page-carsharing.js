@@ -40,9 +40,25 @@ class PageCarsharing {
          document.querySelector("#suchknopf").addEventListener("click", function(event){
            _suchen();
          });
+         document.querySelector("#anbietenknopf").addEventListener("click", function(event){
+           _anbieten();
+         });
          _jule = this;
      }
 }
+
+async function _anbieten() {
+  let start = document.querySelector("#start").value;
+  let ende = document.querySelector("#ziel").value;
+  let datum = document.querySelector("#datum").value;
+  let uhrzeit = document.querySelector("#uhrzeit").value;
+  let kontakt = document.querySelector("#kontakt").value;
+
+  await database.savefahrt(start, ende, datum, uhrzeit, kontakt);
+
+  alert("bv");
+}
+
 async function _suchen() {
   let html = await fetch("page-carsharing/page-carsharing.html");
   let css = await fetch("page-carsharing/page-carsharing.css");

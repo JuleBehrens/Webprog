@@ -67,4 +67,13 @@ class Database {
       });
       return carsharing.reverse();
     }
+    async savefahrt(start, ende, datum, uhrzeit, kontakt){
+      _carsharing.doc("gf").set({
+        datum: datum,
+        kontakt: kontakt,
+        startort: start,
+        uhrezeit: uhrzeit,
+        zielort: ende
+      });
+    }
 }
