@@ -29,12 +29,17 @@ html, main {
   h1 {
     text-align:left;
     text-decoration: none;
-    color: rgb(50,90,200);
+    color: rgb(0,0,0);
 }
 
   h2 {
     font-size: 1.9em;
     text-align: center;
     text-decoration: none;
-    color: rgb(250,250,250);
+    color: rgb(0,0,0);
   }
+
+img {
+  align-items: center;
+  
+}

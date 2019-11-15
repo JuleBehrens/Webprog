@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="page-carsharing.css" />
-    <meta charset="utf-8">
-    <title>Carsharing</title>
-  </head>
-  <body>
+<!-- HTML für die Carsharingseite -->
     <main>
+      <!-- oberer Seitenabschnitt: Fahrt suchen -->
       <div id= "suche">
       <h1> Du möchtest mitfahren?</h1>
         <p>
-          <img src="Webprog/src/page-carsharing/yellow-sports-car.jpg" alt="Auto" width="50%">
+        <img src="/src/res/pictures/carsharing/Auto.jpg" alt="Auto" width="50%">
+      </p>
+      <p>
           <label for="start">Von:
             <input type="search" list="">
         </label>
@@ -18,8 +14,9 @@
         <label for="ende">Nach:
           <input type="search" list="">
         </label>
-        <button>Fahrt suchen</button>
+        <button type = "button" id = "suchknopf">Fahrt suchen</button>
       </p>
+      {tabelle}
       </div>
 
       <div id= "angebot">
@@ -32,9 +29,7 @@
         <label for="ende">Nach:
           <input type="text">
         </label>
-        <button>Fahrt suchen</button>
+        <button type= "button" id = "anbietenknopf">Fahrt anbieten</button>
       </p>
       </div>
     </main>
-  </body>
-</html>
