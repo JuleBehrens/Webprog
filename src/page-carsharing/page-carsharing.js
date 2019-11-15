@@ -3,6 +3,7 @@
 /**
  * Klasse PageOverview: Stellt die Startseite der App zur Verfügung
  */
+ let _jule;
 class PageCarsharing {
     /**
      * Konstruktor
@@ -39,7 +40,7 @@ class PageCarsharing {
          document.querySelector("#suchknopf").addEventListener("click", function(event){
            _suchen();
          });
-
+         _jule = this;
      }
 }
 async function _suchen() {
@@ -54,15 +55,31 @@ async function _suchen() {
       return;
   }
 
+let tab = html.querySelector('#tabelle');
+let zeile = html.querySelector("#platzhalter");
+let allezeilen = document.createElement("div");
+
+  let fahrtenliste = await database.selectallcarsharing();
+  fahrtenliste.forEach(fahrt =>{
+      let z = zeile.innerHTML;
+      z.replace("{datum}", fahrt.datum);
+      z.replace("{uhrzeit}", fahrt.uhrzeit);
+      z.replace("{kontakt}", fahrt.kontakt);
+      allezeilen.innerHTML += z;
+  })
+
+tab.innerHTML = tab.innerHTML.replace("{platzhalter}", allezeilen.innerHTML);
   // Seite zur Anzeige bringen
+
+
   let pageDom = document.createElement("div");
-  html = html.replace("{tabelle}","penis");
+  html = html.replace("{tabelle}",tab);
   pageDom.innerHTML = html;
 
 
-  this._app.setPageCss(css);
+  _jule._app.setPageCss(css);
 
-  this._app.setPageContent(pageDom.querySelector("main"));
+  _jule._app.setPageContent(pageDom.querySelector("main"));
   document.querySelector("#suchknopf").addEventListener("click", function(event){
     _suchen();
   });

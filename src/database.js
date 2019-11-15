@@ -36,6 +36,7 @@ class Database {
       this._db = firebase.firestore();
       this._standorte = this._db.collection("standorte");
       this._modelle = this._db.collection("modelle");
+      this._carsharing = this._db.collection("carsharing");
     }
 
     async selectallstandorte(){
@@ -56,5 +57,14 @@ class Database {
         modelle.push(modell);
       });
       return modelle;
+    }
+    async selectallcarsharing(){
+      let result = await this._modelle.orderBy("datum").get();
+      let carsharing = [];
+      result.forEach(entry => {
+        let carshare = entry.data();
+        carsharing.push(carshare);
+      });
+      return carsharing;
     }
 }
