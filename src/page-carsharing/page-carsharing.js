@@ -55,25 +55,32 @@ async function _suchen() {
       return;
   }
 
-let tab = html.querySelector('#tabelle');
-let zeile = html.querySelector("#platzhalter");
-let allezeilen = document.createElement("div");
+let site = document.createElement("div");
+site.innerHTML = html;
+
+let tab = site.querySelector('#tabelle');
+let zeile = site.querySelector("#platzhalter");
+let allezeilen = "";
 
   let fahrtenliste = await database.selectallcarsharing();
   fahrtenliste.forEach(fahrt =>{
       let z = zeile.innerHTML;
-      z.replace("{datum}", fahrt.datum);
-      z.replace("{uhrzeit}", fahrt.uhrzeit);
-      z.replace("{kontakt}", fahrt.kontakt);
-      allezeilen.innerHTML += z;
+      z = z.replace("{datum}", fahrt.datum);
+      z = z.replace("{uhrzeit}", fahrt.uhrzeit);
+      z = z.replace("{kontakt}", fahrt.kontakt);
+      z = z.replace("<table>", "");
+      z = z.replace("<tbody>", "");
+      z = z.replace("</tbody>", "");
+      z = z.replace("</table>", "");
+      allezeilen += z;
   })
 
-tab.innerHTML = tab.innerHTML.replace("{platzhalter}", allezeilen.innerHTML);
+tab.innerHTML = tab.innerHTML.replace("<td></td>", allezeilen);
   // Seite zur Anzeige bringen
 
 
   let pageDom = document.createElement("div");
-  html = html.replace("{tabelle}",tab);
+  html = html.replace("{tabelle}",tab.innerHTML);
   pageDom.innerHTML = html;
 
 

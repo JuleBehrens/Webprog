@@ -59,12 +59,12 @@ class Database {
       return modelle;
     }
     async selectallcarsharing(){
-      let result = await this._modelle.orderBy("datum").get();
+      let result = await this._carsharing.orderBy("datum").get();
       let carsharing = [];
       result.forEach(entry => {
         let carshare = entry.data();
         carsharing.push(carshare);
       });
-      return carsharing;
+      return carsharing.reverse();
     }
 }
