@@ -46,7 +46,11 @@
 }
 
 #anliegen{
+  width: 20em;
   height: 12em;
+  font-size: 20pt;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .button{
