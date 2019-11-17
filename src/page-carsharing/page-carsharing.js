@@ -58,7 +58,7 @@ async function _anbieten() {
   if(saved){
     alert("Die Fahrt wurde gespeichert!");
   }else{
-    alert("Es ist ein Problem aufgetreten.");
+    alert("Das hat nicht geklappt.");
   }
 }
 

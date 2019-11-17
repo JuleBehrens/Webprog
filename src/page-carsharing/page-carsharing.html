@@ -1,48 +1,50 @@
 <!-- HTML für die Carsharingseite -->
-    <main>
+<main>
       <!-- oberer Seitenabschnitt: Fahrt suchen -->
-      <div id= "suche">
-      <h1> Du möchtest mitfahren?</h1>
-      
-      <p>
-        <div class="feld">
-          <div class = "links">
+  <div id= "suche">
+    <h1> Du möchtest mitfahren?</h1>
+
+    <p>
+      <div class="feld">
+        <div class = "links">
           <label for="start">
             <input type="text" id = "startsuche" placeholder = "Von">
-        </label>
-      </div>
+          </label>
+          </div>
 
-      <div class = "rechts">
+        <div class = "rechts">
         <label for="ende">
           <input type="text" id = "zielsuche" placeholder = "Nach">
         </label>
       </div>
-      </div>
-      <div class="button_container">
-        <button type = "button" id = "suchknopf">Suchen</button>
-      </div>
+    </div>
+
+        <div class="button_container">
+          <button type = "button" id = "suchknopf">Suchen</button>
+        </div>
       </p>
       {tabelle}
-      </div>
+  </div>
 
-      <div id= "angebot">
-      <h2>Du hast noch Plätze frei?</h2>
-        <p>
-          <div class="feld">
-            <div class = "links"
+      <!-- unterer Seitenabschnitt: Fahrt anbieten -->
 
+  <div id= "angebot">
+    <h2>Du hast noch Plätze frei?</h2>
+
+    <p>
+      <div class="feld">
+
+        <div class = "links"
           <label for="start">
             <input type="text" id = "start" placeholder = "Von">
-        </label>
+          </label>
 
-        <label for="ende">
-          <input type="text" id = "ende" placeholder = "Nach">
-        </label>
-
-      </div>
+          <label for="ende">
+            <input type="text" id = "ende" placeholder = "Nach">
+          </label>
+        </div>
 
       <div class = rechts>
-
         <label for="datum">
           <input type="text" id = "datum" placeholder = "Datum">
         </label>
