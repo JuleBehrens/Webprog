@@ -73,7 +73,7 @@ class Database {
         datum: datum,
         kontakt: kontakt,
         startort: start,
-        uhrezeit: uhrzeit,
+        uhrzeit: uhrzeit,
         zielort: ende
       }).catch(function(error){
         saved = false;

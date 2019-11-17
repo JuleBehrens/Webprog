@@ -56,9 +56,9 @@ async function _anbieten() {
 
   let saved = await database.savefahrt(start, ende, datum, uhrzeit, kontakt);
   if(saved){
-    alert("saved");
+    alert("Die Fahrt wurde gespeichert!");
   }else{
-    alert("unsaved");
+    alert("Es ist ein Problem aufgetreten.");
   }
 }
 

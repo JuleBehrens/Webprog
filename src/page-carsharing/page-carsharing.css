@@ -3,28 +3,63 @@ html, main {
     border: 0;
     padding: 0;
 }
+.feld{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.feld input{
+  width: 20em;
+  font-size: 20pt;
+  margin-right: 1em;
+}
+.links{
+  flex: 50%;
+  text-align: center;
+}
+.rechts{
+  flex: 50%;
+  text-align: center;
+}
 
   #suche{
     padding-bottom: 2em;
-    padding-left: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-image: url("/src/res/pictures/carsharing/mitfahren.png");
+    background-size: cover;
   }
 
   #angebot {
     background-color: rgba(50, 90, 200, 0.3);
     padding-bottom: 2em;
-    padding-left: 4em;
-  }
+    padding-left: 2em;
+    padding-right: 2em;
+    background-image: url("/src/res/pictures/carsharing/Auto.jpeg");
+    background-size:cover;
+}
+
+table, th,td {
+  margin: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 0.5em;
+}
+
+th,td {
+  padding: 0.4em 1.1em;
+  border-radius: 0.1em;
+}
 
   button {
-    height: 2em;
-    width: 6em;
-    text-align:center;
-    padding: inherit;
+    margin: 2em;
+    text-align: center;
+    font-size: 14pt;
+  }
+  .button_container{
+    text-align: center;
   }
 
-  button:hover{
-  background-color: rgba(250, 250, 250, 0.3);
-}
 
   h1 {
     text-align:left;
@@ -34,12 +69,7 @@ html, main {
 
   h2 {
     font-size: 1.9em;
-    text-align: center;
+    text-align: right;
     text-decoration: none;
-    color: rgb(0,0,0);
+    color: #190714;
   }
-
-img {
-  align-items: center;
-  
-}

@@ -3,18 +3,24 @@
       <!-- oberer Seitenabschnitt: Fahrt suchen -->
       <div id= "suche">
       <h1> Du möchtest mitfahren?</h1>
-        <p>
-        <img src="/src/res/pictures/carsharing/Auto.jpg" alt="Auto" width="50%">
-      </p>
+      
       <p>
-          <label for="start">Von:
-            <input type="text" id = "startsuche" list="">
+        <div class="feld">
+          <div class = "links">
+          <label for="start">
+            <input type="text" id = "startsuche" placeholder = "Von">
         </label>
+      </div>
 
-        <label for="ende">Nach:
-          <input type="text" id = "zielsuche" list="">
+      <div class = "rechts">
+        <label for="ende">
+          <input type="text" id = "zielsuche" placeholder = "Nach">
         </label>
-        <button type = "button" id = "suchknopf">Fahrt suchen</button>
+      </div>
+      </div>
+      <div class="button_container">
+        <button type = "button" id = "suchknopf">Suchen</button>
+      </div>
       </p>
       {tabelle}
       </div>
@@ -22,28 +28,39 @@
       <div id= "angebot">
       <h2>Du hast noch Plätze frei?</h2>
         <p>
-          <label for="start">Von:
-            <input type="text" id = "start">
+          <div class="feld">
+            <div class = "links"
+
+          <label for="start">
+            <input type="text" id = "start" placeholder = "Von">
         </label>
 
-        <label for="ende">Nach:
-          <input type="text" id = "ende">
+        <label for="ende">
+          <input type="text" id = "ende" placeholder = "Nach">
         </label>
 
-        <label for="datum">Datum:
-          <input type="text" id = "datum">
+      </div>
+
+      <div class = rechts>
+
+        <label for="datum">
+          <input type="text" id = "datum" placeholder = "Datum">
         </label>
 
-        <label for="uhrzeit">Abfahrtszeit:
-          <input type="text" id= "uhrzeit">
+        <label for="uhrzeit">
+          <input type="text" id= "uhrzeit" placeholder = "Abfahrtszeit">
         </label>
 
-        <label for="kontakt">Kontakt:
-          <input type="text" id = "kontakt">
+        <label for="kontakt">
+          <input type="text" id = "kontakt" placeholder = "Kontakt">
         </label>
 
+      </div>
+    </div>
 
-        <button type= "button" id = "anbietenknopf">Fahrt anbieten</button>
+<div class="button_container">
+        <button type= "button" id = "anbietenknopf">Anbieten</button>
+      </div>
       </p>
       </div>
     </main>
